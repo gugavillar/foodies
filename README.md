@@ -10,7 +10,9 @@ O Next Level Foods App é uma aplicação web que permite aos usuários adiciona
 
 ## Demonstração
 
-[Inserir links ou imagens demonstrativas da sua aplicação. Isso pode incluir capturas de tela, GIFs ou links para uma versão ao vivo.]
+![Screenshot da aplicação](/public/screenshot.png)
+![Screenshot da aplicação 2](/public/screenshot-2.png)
+![Screenshot da aplicação 3](/public/screenshot-3.png)
 
 ## Tecnologias Utilizadas
 
