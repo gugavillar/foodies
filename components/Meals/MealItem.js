@@ -4,7 +4,6 @@ import Image from 'next/image'
 import styles from './MealItem.module.css'
 
 export const MealItem = ({ title, slug, image, summary, creator }) => {
-  console.log(image)
   return (
     <article className={styles.meal}>
       <header>
