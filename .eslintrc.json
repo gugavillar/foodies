@@ -1,0 +1,26 @@
+{
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "@next/next/no-img-element": "off",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "groups": [
+          ["builtin", "internal", "external"],
+          ["parent", "sibling"],
+          "index",
+          "object",
+          "type"
+        ]
+      }
+    ]
+  }
+}
