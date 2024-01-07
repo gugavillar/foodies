@@ -164,8 +164,6 @@ const dummyMeals = [
   },
 ]
 
-db.prepare(`DROP TABLE meals`).run()
-
 db.prepare(
   `
    CREATE TABLE IF NOT EXISTS meals (
@@ -180,6 +178,8 @@ db.prepare(
     )
 `,
 ).run()
+
+db.prepare(`DELETE FROM meals`).run()
 
 async function initData() {
   const stmt = db.prepare(`
