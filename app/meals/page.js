@@ -7,6 +7,11 @@ import { getMeals } from '@/lib/meals'
 
 import styles from './page.module.css'
 
+export const metadata = {
+  title: 'All meals',
+  description: 'Browse the delicious meals shared by our vibrant community.',
+}
+
 const MealsWrapper = async () => {
   const meals = await getMeals()
 
