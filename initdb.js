@@ -1,5 +1,5 @@
-const sql = require('better-sqlite3');
-const db = sql('meals.db');
+const sql = require('better-sqlite3')
+const db = sql('meals.db')
 
 const dummyMeals = [
   {
@@ -162,9 +162,12 @@ const dummyMeals = [
     creator: 'Sophia Green',
     creator_email: 'sophiagreen@example.com',
   },
-];
+]
 
-db.prepare(`
+db.prepare(`DROP TABLE meals`).run()
+
+db.prepare(
+  `
    CREATE TABLE IF NOT EXISTS meals (
        id INTEGER PRIMARY KEY AUTOINCREMENT,
        slug TEXT NOT NULL UNIQUE,
@@ -175,7 +178,8 @@ db.prepare(`
        creator TEXT NOT NULL,
        creator_email TEXT NOT NULL
     )
-`).run();
+`,
+).run()
 
 async function initData() {
   const stmt = db.prepare(`
@@ -189,11 +193,11 @@ async function initData() {
          @creator,
          @creator_email
       )
-   `);
+   `)
 
   for (const meal of dummyMeals) {
-    stmt.run(meal);
+    stmt.run(meal)
   }
 }
 
-initData();
+initData()
