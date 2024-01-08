@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/postgres": "^0.5.1",
     "better-sqlite3": "^9.2.2",
     "imgbb-image-uploader": "^1.0.6",
     "next": "14.0.3",
